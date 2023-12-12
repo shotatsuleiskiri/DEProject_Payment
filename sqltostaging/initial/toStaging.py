@@ -10,6 +10,3 @@ class ToStaging:
         self.dbname = dbname
         self.schema = schema
     
-    def getDF(self, source_dbname, tablename):
-        return pd.read_sql(f"select * from {self.schema}.{tablename}"
-                        ,conn.getConnection(source_dbname))
